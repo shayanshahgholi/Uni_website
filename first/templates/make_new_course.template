@@ -42,7 +42,7 @@
         <option value="4">Wednseday</option>
       </select>
       <br>
-      <button type="submit" value='add'>Add</button>
+      <button type="submit" value='add' class="button">Add</button>
     </div>
   </form> 
   {% endblock %}

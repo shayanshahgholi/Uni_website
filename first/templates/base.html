@@ -38,19 +38,53 @@ header li a {
 color: red;  
 text-decoration: none;  
 }  
+input[type=text], input[type=password], input[type=email]{
+    width: 30%;
+    height: 30px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+.button {
+    background-color: #006DB0;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  div {
+    width: 500px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+  }
 </style>   
 </Head>  
 <Body>   
 <header>  
 <nav>  
 <ul> 
-<div id='navbar'>
 <li> <a id="home-page" href="/first"> Home </a> </li>  
 <li> <a id="login" href="/first/login"> Login </a> </li>  
 <li> <a id="register" href="/first/register"> Register </a> </li>
 <li> <a id="contact" href="/first/contact"> Contact us </a> </li>
 </ul>
-</div>
+
 </nav>  
 </header>  
 {% block content %} 

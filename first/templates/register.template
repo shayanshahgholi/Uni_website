@@ -3,6 +3,14 @@
     <form action="/first/register_add" method="post" id="Register">
         {% csrf_token%}
         {{form.as_ul}}
-        <button type="submit" value='Register'>Register</button>
+        <label for="gender">Gender:</label>
+        <select name="gender">
+          <option value="0">Male</option>
+          <option value="1">Female</option>
+        </select>
+        <label for="bio"><b>Bio: </b></label>
+        <input type="textarea" placeholder="{{user.moredetail.get_gender_display}}" name="bio">
+        <br>
+        <button type="submit" value='Register' class="button">Register</button>
     </form>
 {% endblock%}

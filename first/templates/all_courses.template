@@ -1,7 +1,7 @@
 {% extends 'login_base.html' %}
 
 {% block content %}
-    <div id='all_courses'>
+    {% comment %} <div id='all_courses'> {% endcomment %}
         {% for course in courses%}
             <div>
                 <h3> Department:</h3><span id=”department”>{{course.department}} </span><br>
@@ -11,9 +11,9 @@
                 <h3> Teacher:</h3><span id="teacher">{{course.teacher}} </span><br>
                 <h3> Start time:</h3><span id=”start_time”>{{course.start_time}} </span><br>
                 <h3> End time:</h3><span id=”end_time”>{{course.end_time}} </span><br>
-                <h3> First day:</h3><span id=”first_day”>{{course.first_day}} </span><br>
-                <h3> Second day:</h3><span id=”second_day”>{{course.second_day}} </span><br>
+                <h3> First day:</h3><span id=”first_day”>{{course.get_first_day_display}} </span><br>
+                <h3> Second day:</h3><span id=”second_day”>{{course.get_second_day_display}} </span><br>
             </div>
         {% endfor %}
-    </div>
+    {% comment %} </div> {% endcomment %}
 {% endblock %}
