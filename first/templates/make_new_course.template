@@ -1,0 +1,48 @@
+{% extends 'login_base.html' %}
+{% block content %} 
+<form action="/first/add_course" method="post" id="make_course">
+    {% csrf_token %}
+    <div class="container">
+      <label for="department"><b>Department</b></label>
+      <input type="text" placeholder="department" name="department" required>
+      <br>
+      <label for="name"><b>Name</b></label>
+      <input type="text" placeholder="name" name="name" required>
+      <br>
+      <label for="course_number"><b>Course number</b></label>
+      <input type="number" placeholder="course number" name="course_number" required>
+      <br>
+      <label for="group_number"><b>Group number</b></label>
+      <input type="number" placeholder="group number" name="group_number" required>
+      <br>
+      <label for="teacher"><b>Teacher</b></label>
+      <input type="text" placeholder="teacher" name="teacher" required>
+      <br>
+      <label for="start_time"><b>Start time</b></label>
+      <input type="text" placeholder="start time" name="start_time" required>
+      <br>
+      <label for="end_time"><b>End time</b></label>
+      <input type="text" placeholder="end time" name="end_time" required>
+      <br>
+      <label for="first_day">First day:</label>
+      <select name="first_day" required>
+        <option value="0">Saturday</option>
+        <option value="1">Sunday</option>
+        <option value="2">Monday</option>
+        <option value="3">Thursday</option>
+        <option value="4">Wednseday</option>
+      </select>
+      <label for="second_day">Second day:</label>
+      <select name="second_day">
+        <option value="5">NOTSET</option>
+        <option value="0">Saturday</option>
+        <option value="1">Sunday</option>
+        <option value="2">Monday</option>
+        <option value="3">Thursday</option>
+        <option value="4">Wednseday</option>
+      </select>
+      <br>
+      <button type="submit" value='add'>Add</button>
+    </div>
+  </form> 
+  {% endblock %}

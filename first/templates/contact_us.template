@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %} 
+    <form action="/first/contact_send" method="post" id="search">
+        {% csrf_token%}
+        {{form.as_ul}}
+        <button type="submit" value='Contact'>Send</button>
+    </form>
+{% endblock%}

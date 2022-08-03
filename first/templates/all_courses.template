@@ -1,0 +1,19 @@
+{% extends 'login_base.html' %}
+
+{% block content %}
+    <div id='all_courses'>
+        {% for course in courses%}
+            <div>
+                <h3> Department:</h3><span id=”department”>{{course.department}} </span><br>
+                <h3> Name:</h3><span id=”name”>{{course.name}} </span><br>
+                <h3> Course number:</h3><span id=”course_number”>{{course.course_number}} </span><br>
+                <h3> Group number:</h3><span id=”group_number”>{{course.group_number}} </span><br>
+                <h3> Teacher:</h3><span id="teacher">{{course.teacher}} </span><br>
+                <h3> Start time:</h3><span id=”start_time”>{{course.start_time}} </span><br>
+                <h3> End time:</h3><span id=”end_time”>{{course.end_time}} </span><br>
+                <h3> First day:</h3><span id=”first_day”>{{course.first_day}} </span><br>
+                <h3> Second day:</h3><span id=”second_day”>{{course.second_day}} </span><br>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

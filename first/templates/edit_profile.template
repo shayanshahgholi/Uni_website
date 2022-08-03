@@ -1,0 +1,12 @@
+{% extends "login_base.html" %}
+
+{% block content %} 
+    <form action="/first/edit_profile" method="post" id="setting_form">
+        {% csrf_token%}
+        <label for="fname"><b>First name</b></label>
+        <input type="text" placeholder={{user.first_name}} name="first_name"><br><br>
+        <label for="lname"><b>Last name</b></label>
+        <input type="text" placeholder={{user.last_name}} name="last_name"><br><br>
+        <button type="submit" value='Edit'>Edit</button>
+    </form>
+{% endblock %}

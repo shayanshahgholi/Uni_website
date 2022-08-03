@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<Head>  
+    
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href= {% static '/first/fav.ico' %}>
+    <style>
+        body {
+          background-image: url({% static 'first/background.jpg' %});
+          background-size: cover;
+        }
+    </style> 
+
+
+
+<style type=text/css>   
+body {  
+height: 125vh;  
+margin-top: 80px;  
+padding: 30px;  
+background-size: cover;  
+font-family: sans-serif;  
+}  
+header {  
+background-color: black;  
+position: fixed;  
+left: 0;  
+right: 0;  
+top: 5px;  
+height: 30px;  
+display: flex;  
+align-items: center;  
+box-shadow: 0 0 25px 0 black;  
+}  
+header * {  
+display: inline;  
+}  
+header li {  
+margin: 20px;  
+}  
+header li a {  
+color: red;  
+text-decoration: none;  
+}  
+</style>   
+</Head>  
+<Body>   
+<header>  
+<nav>  
+<ul> 
+<div id='navbar'>
+<li> <a id="home-page" href="/first"> Home </a> </li>  
+<li> <a id="logout" href="/first/logout"> Logout </a> </li> 
+<li> <a id="contact" href="/first/contact"> Contact us </a></li>
+<li> <a id='profile' href="/first/profile"> Profile </a></li>
+<li> <a id='panel' href="/first/panel"> Panel </a></li>
+</ul>
+</div>
+</nav>  
+</header>  
+{% block content %} 
+{% endblock %}  
+</Body>   
+
+</html>

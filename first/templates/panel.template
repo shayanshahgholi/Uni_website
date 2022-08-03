@@ -1,0 +1,8 @@
+{% extends 'login_base.html' %}
+
+{% block content %}
+    {% if user.is_superuser %}
+        <a id="make_new_course" href='/first/make_new_course'> <h3>Make new course <h3></a>
+    {% endif %}
+    <a id="all_courses" href='/first/all_courses'> <h3>Show all courses<h3></a>
+{% endblock %}
