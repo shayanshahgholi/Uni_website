@@ -11,7 +11,7 @@ class MoreDetail(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     gender = models.IntegerField(choices=Gender, default=2)
     bio = models.TextField()
-    avatar = models.ImageField(upload_to = "images/")
+    avatar = models.ImageField(upload_to = "images/", default='./static/first/avatar.jpg')
 
 class Course(models.Model):
     Days= (

@@ -122,7 +122,7 @@ def edit_user(request):
     lname = request.POST.get('last_name', None)
     gender = request.POST.get('gender')
     bio = request.POST.get('bio', None)
-    image_src = request.POST.get('avatar')
+    image_src = request.FILES.get('avatar')
     if (fname != None and fname != ''):
         request.user.first_name = fname
     if (lname != None and lname != ''):

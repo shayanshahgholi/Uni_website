@@ -1,6 +1,6 @@
 {% extends "login_base.html" %}
 {% block content %}
-    <img src="{{user.moredetail.avatar}}" alt="Avatar" class="avatar">
+    <img src="{{user.moredetail.avatar.url}}" alt="Avatar" class="avatar">
     <h3> First name:</h3><span id=”text_first_name”>{{user.first_name}} </span><br>
     <h3> Last name:</h3><span id=”text_last_name”>{{user.last_name}} </span><br>
     <h3> Username:</h3><span id=”text_first_name”>{{user}} </span><br>
